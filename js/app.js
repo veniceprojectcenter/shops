@@ -5,7 +5,7 @@ app.config(function($routeProvider, $locationProvider) {
   $locationProvider.html5Mode(false);
   $routeProvider.
     when('/index', {
-      templateUrl: "/views/map.html"
+      templateUrl: "views/map.html"
     }).
     otherwise('/index');
 })
