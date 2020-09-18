@@ -1,2 +1,1 @@
-# stores_new
-New app for shops data
+# Venice’s commerce after COVID
