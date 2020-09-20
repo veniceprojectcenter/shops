@@ -137,188 +137,127 @@ app.init_map = function(ctl){
   ctl.getIcon = function(ateco){
     switch (ateco) {
       case "00.00":
-        return "/public/generic.png";
-        break;
+        return "public/generic.png";
       case "10.71":
-        return "/public/pins/bread.png";
-        break;
+        return "public/pins/bread.png";
       case "11.02":
-        return "/public/pins/bevande.png";
-        break;
+        return "public/pins/bevande.png";
       case "14.13":
-        return "/public/pins/vestiti.png";
-        break;
+        return "public/pins/vestiti.png";
       case "14.19":
-        return "/public/pins/vestiti.png";
-        break;
+        return "public/pins/vestiti.png";
       case "16.23":
-        return "/public/pins/homecenter.png";
-        break;
+        return "public/pins/homecenter.png";
       case "24.41":
-        return "/public/pins/tools.png";
-        break;
+        return "public/pins/tools.png";
       case "27.51":
-        return "/public/pins/poweroutage.png";
-        break;
+        return "public/pins/poweroutage.png";
       case "31.01":
-        return "/public/pins/homecenter.png";
-        break;
+        return "public/pins/homecenter.png";
       case "32.11":
-        return "/public/pins/jewelry.png";
-        break;
+        return "public/pins/jewelry.png";
       case "32.12":
-        return "/public/pins/jewelry.png";
-        break;
+        return "public/pins/jewelry.png";
       case "33.12":
-        return "/public/pins/workshop.png";
-        break;
+        return "public/pins/workshop.png";
       case "46.16":
-        return "/public/pins/vestiti.png";
-        break;
+        return "public/pins/vestiti.png";
       case "46.33":
-        return "/public/pins/grocery.png";
-        break;
+        return "public/pins/grocery.png";
       case "46.33":
-        return "/public/pins/bevande.png";
-        break;
+        return "public/pins/bevande.png";
       case "46.37":
-        return "/public/pins/grocery.png";
-        break;
+        return "public/pins/grocery.png";
       case "46.38":
-        return "/public/pins/grocery.png";
-        break;
+        return "public/pins/grocery.png";
       case "46.41":
-        return "/public/pins/textiles.png";
-        break;
+        return "public/pins/textiles.png";
       case "46.42":
-        return "/public/pins/vestiti.png";
-        break;
+        return "public/pins/vestiti.png";
       case "46.43":
-        return "/public/pins/poweroutage.png";
-        break;
+        return "public/pins/poweroutage.png";
       case "46.45":
-        return "/public/pins/perfumery.png";
-        break;
+        return "public/pins/perfumery.png";
       case "46.46":
-        return "/public/pins/medicalstore.png";
-        break;
+        return "public/pins/medicalstore.png";
       case "46.49":
-        return "/public/pins/supermarket.png";
-        break;
+        return "public/pins/supermarket.png";
       case "46.51":
-        return "/public/pins/computers.png";
-        break;
+        return "public/pins/computers.png";
       case "46.74":
-        return "/public/pins/tools.png";
-        break;
+        return "public/pins/tools.png";
       case "47.11":
-        return "/public/pins/supermarket.png";
-        break;
+        return "public/pins/supermarket.png";
       case "47.22":
-        return "/public/pins/alimentari.png";
-        break;
+        return "public/pins/alimentari.png";
       case "47.24":
-        return "/public/pins/candy.png";
-        break;
+        return "public/pins/candy.png";
       case "47.26":
-        return "/public/pins/grocery.png";
-        break;
+        return "public/pins/grocery.png";
       case "47.29":
-        return "/public/pins/grocery.png";
-        break;
+        return "public/pins/grocery.png";
       case "47.65":
-        return "/public/pins/toys.png";
-        break;
+        return "public/pins/toys.png";
       case "47.65":
-        return "/public/pins/textiles.png";
-        break;
+        return "public/pins/textiles.png";
       case "47.71":
-        return "/public/pins/vestiti.png";
-        break;
+        return "public/pins/vestiti.png";
       case "47.73":
-        return "/public/pins/medicalstore.png";
-        break;
+        return "public/pins/medicalstore.png";
       case "47.76":
-        return "/public/pins/pets.png";
-        break;
+        return "public/pins/pets.png";
       case "47.78":
-        return "/public/pins/artgallery.png";
-        break;
+        return "public/pins/artgallery.png";
       case "47.79":
-        return "/public/pins/vestiti.png";
-        break;
+        return "public/pins/vestiti.png";
       case "47.82":
-        return "/public/pins/vestiti.png";
-        break;
+        return "public/pins/vestiti.png";
       case "49.32":
-        return "/public/pins/ferry.png";
-        break;
+        return "public/pins/ferry.png";
       case "49.39":
-        return "/public/pins/ferry.png";
-        break;
+        return "public/pins/ferry.png";
       case "52.22":
-        return "/public/pins/ferry.png";
-        break;
+        return "public/pins/ferry.png";
       case "55.10":
-        return "/public/pins/hotel.png";
-        break;
+        return "public/pins/hotel.png";
       case "55.20":
-        return "/public/pins/hotel.png";
-        break;
+        return "public/pins/hotel.png";
       case "56.10":
-        return "/public/pins/restaurant.png";
-        break;
+        return "public/pins/restaurant.png";
       case "56.29":
-        return "/public/pins/burger.png";
-        break;
+        return "public/pins/burger.png";
       case "56.21":
-        return "/public/pins/burger.png";
-        break;
+        return "public/pins/burger.png";
       case "56.30":
-        return "/public/pins/bevande.png";
-        break;
+        return "public/pins/bevande.png";
       case "64.11":
-        return "/public/pins/bank.png";
-        break;
+        return "public/pins/bank.png";
       case "64.30":
-        return "/public/pins/bank.png";
-        break;
+        return "public/pins/bank.png";
       case "64.99":
-        return "/public/pins/bank.png";
-        break;
+        return "public/pins/bank.png";
       case "66.19":
-        return "/public/pins/bank.png";
-        break;
+        return "public/pins/bank.png";
       case "74.10":
-        return "/public/pins/vestiti.png";
-        break;
+        return "public/pins/vestiti.png";
       case "74.20":
-        return "/public/pins/photography.png";
-        break;
+        return "public/pins/photography.png";
       case "79.11":
-        return "/public/pins/travel.png";
-        break;
+        return "public/pins/travel.png";
       case "90.04":
-        return "/public/pins/artgallery.png";
-        break;
+        return "public/pins/artgallery.png";
       case "93.13":
-        return "/public/pins/arena.png";
-        break;
+        return "public/pins/arena.png";
       case "93.19":
-        return "/public/pins/arena.png";
-        break;
+        return "public/pins/arena.png";
       case "96.01":
-        return "/public/pins/vestiti.png";
-        break;
+        return "public/pins/vestiti.png";
       case "96.02":
-        return "/public/generic.png";
-        break;
+        return "public/generic.png";
       case "96.03":
-        return "/public/generic.png";
-        break;
+        return "public/generic.png";
       case "96.04":
-        return "/public/pins/spa.png";
-        break;
+        return "public/pins/spa.png";
     }
   }
 }
