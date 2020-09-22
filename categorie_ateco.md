@@ -10,7 +10,7 @@
 "46", "Commercio all'ingrosso di bevande" --> SUPERMERCATI
 "47", "Commercio al dettaglio in esercizi non specializzati con prevalenza di prodotti alimentari e bevande" --> SUPERMERCATI
 "49", "Trasporto con taxi, noleggio di autovetture con conducente" --> SERVIZI DI TRASPORTO
-"55", "Alberghi e strutture simili"  --> STRUTTURE RICETTIVE
+"55", "Alberghi e strutture simili" --> STRUTTURE RICETTIVE
 "56", "Ristoranti e attività di ristorazione mobile" --> RISTORAZIONE
 "64", "Altre intermediazioni monetarie" --> BANCHE
 "66", "Attività di negoziazione di contratti relativi a titoli e merci" --> BANCHE

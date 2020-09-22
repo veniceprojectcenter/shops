@@ -1,41 +1,68 @@
-app.init_map = function(ctl){
+app.init_map = function (ctl) {
   ctl.dataset_errors = [];
   ctl.groupInterest = [];
-  ctl.init_map =function(){
+  ctl.init_map = function () {
     console.log("init map!");
-    ctl.map = L.map('map',{zoomControl: false, center:[45.436 , 12.334],zoom: 13 });
-    var zoomButton = L.control.zoom({position: 'bottomright'}).addTo(ctl.map);
-    L.tileLayer('https://api.tiles.mapbox.com/v4/mapbox.run-bike-hike/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiY2l0eWtub3dsZWRnZSIsImEiOiJjaWw1YmluZWEwMGZ5d3VtNW1jdjdkd3kyIn0.7KtmSdDinGzAV4ioENVtNg', {foo: 'bar', attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'}).addTo(ctl.map);
-    $(window).on("resize", function () { $("#map").height($(window).height()); ctl.map.invalidateSize(); }).trigger("resize");
+    ctl.map = L.map("map", {
+      zoomControl: false,
+      center: [45.436, 12.334],
+      zoom: 13,
+    });
+    var zoomButton = L.control.zoom({ position: "bottomright" }).addTo(ctl.map);
+    L.tileLayer(
+      "https://api.tiles.mapbox.com/v4/mapbox.run-bike-hike/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiY2l0eWtub3dsZWRnZSIsImEiOiJjaWw1YmluZWEwMGZ5d3VtNW1jdjdkd3kyIn0.7KtmSdDinGzAV4ioENVtNg",
+      {
+        foo: "bar",
+        attribution:
+          'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+      }
+    ).addTo(ctl.map);
+    $(window)
+      .on("resize", function () {
+        $("#map").height($(window).height());
+        ctl.map.invalidateSize();
+      })
+      .trigger("resize");
     ctl.apply();
-    
   };
 
-
-  ctl.addMarker = function(item){
-    for(el in item){
-      for(i in item[1]){
-        if(item[1][i].birth_certificate.lat == null){  
+  ctl.addMarker = function (item) {
+    for (el in item) {
+      for (i in item[1]) {
+        if (item[1][i].birth_certificate.lat == null) {
           console.log("errore lat => ", item);
           ctl.dataset_errors.push(item);
         }
       }
     }
     var iconurl;
-    for(thing in item[1]){
-      if(item[1][thing].icon){
+    for (thing in item[1]) {
+      if (item[1][thing].icon) {
         iconurl = item[1][thing].icon;
       }
       var icon = L.icon({
-      iconUrl:      ctl.getIcon(item[1][thing].ateco_code.substr(0,5)),
-      iconSize:     [32, 32], // size of the icon
-      iconAnchor:   [16, 16], // point of the icon which will correspond to marker's location
-      popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+        iconUrl: ctl.getIcon(item[1][thing].ateco_code.substr(0, 5)),
+        iconSize: [32, 32], // size of the icon
+        iconAnchor: [16, 16], // point of the icon which will correspond to marker's location
+        popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
       });
-      var new_marker = L.marker([item[1][thing].birth_certificate.lat, item[1][thing].birth_certificate.lng], {customID: item[1][thing].birth_certificate.ck_id, item: item[1][thing], icon: icon});
-      new_marker.on('click', ctl.opendetail);
-      for(mark in ctl.markers){
-        if(ctl.markers[mark][0]==new_marker.options.item.store_type && new_marker.options.item.store_name != ""){
+      var new_marker = L.marker(
+        [
+          item[1][thing].birth_certificate.lat,
+          item[1][thing].birth_certificate.lng,
+        ],
+        {
+          customID: item[1][thing].birth_certificate.ck_id,
+          item: item[1][thing],
+          icon: icon,
+        }
+      );
+      new_marker.on("click", ctl.opendetail);
+      for (mark in ctl.markers) {
+        if (
+          ctl.markers[mark][0] == new_marker.options.item.store_type &&
+          new_marker.options.item.store_name != ""
+        ) {
           ctl.markers[mark][1].push(new_marker);
         }
       }
@@ -43,30 +70,30 @@ app.init_map = function(ctl){
   };
 
   /*
-  * This method crates and return the data structure
-  * @data   the actual data that need to be sorted
-  * @types  an array in which the shop_types are collected
-  */
+   * This method crates and return the data structure
+   * @data   the actual data that need to be sorted
+   * @types  an array in which the shop_types are collected
+   */
 
-  function fixData(data, types,){
+  function fixData(data, types) {
     var testing = new Array(0);
-    for(info in data){
+    for (info in data) {
       //adding sthe store tyes to the list
-      if(!types.includes(data[info].store_type)){
+      if (!types.includes(data[info].store_type)) {
         types.push(data[info].store_type);
         testing.push(new Array(data[info].store_type, []));
         ctl.markers.push(new Array(data[info].store_type, []));
       }
       //changing the value of the years
-      if (parseInt(data[info].opened_in_year) < ctl.min_year){
-        ctl.min_year = parseInt(data[info].opened_in_year)
+      if (parseInt(data[info].opened_in_year) < ctl.min_year) {
+        ctl.min_year = parseInt(data[info].opened_in_year);
       }
-      if (parseInt(data[info].opened_in_year) > ctl.max_year){
-        ctl.max_year = parseInt(data[info].opened_in_year)
+      if (parseInt(data[info].opened_in_year) > ctl.max_year) {
+        ctl.max_year = parseInt(data[info].opened_in_year);
       }
       //adding the shops to the shop type to which they belong
-      for(el in testing){
-        if(testing[el][0] == data[info].store_type){
+      for (el in testing) {
+        if (testing[el][0] == data[info].store_type) {
           testing[el][1].push(data[info]);
         }
       }
@@ -75,16 +102,16 @@ app.init_map = function(ctl){
   }
 
   /*
-  * This method creates the data structure that contains all the shops.
-  * Elements are sorted by shop_type and the data structure is like this example
-  *
-  *   dataStructure = [0]                  |[1]                   |[2]                     |[3]
-  *                   [bakery][listOfShops]|[butcher][listOfShops]|[nail shop][listOfShops]|[hotel][listOfShops]
-  *                                        |                      |                        |
-  */
+   * This method creates the data structure that contains all the shops.
+   * Elements are sorted by shop_type and the data structure is like this example
+   *
+   *   dataStructure = [0]                  |[1]                   |[2]                     |[3]
+   *                   [bakery][listOfShops]|[butcher][listOfShops]|[nail shop][listOfShops]|[hotel][listOfShops]
+   *                                        |                      |                        |
+   */
 
-  ctl.addData = function(data){
-    var types = []
+  ctl.addData = function (data) {
+    var types = [];
     ctl.max_year = 0;
     ctl.min_year = 3000;
     var show = fixData(data, types);
@@ -93,8 +120,8 @@ app.init_map = function(ctl){
     ctl.shop_type = Array.from(new Set(types));
     ctl.marker_year = show;
 
-    for (key in show){
-      ctl.ateco.push(data[key].ateco_code.substr(0,5));
+    for (key in show) {
+      ctl.ateco.push(data[key].ateco_code.substr(0, 5));
       ctl.addMarker(show[key]);
     }
 
@@ -104,26 +131,46 @@ app.init_map = function(ctl){
   };
 
   /*
-  * This method opens a window with the information about the marker that has been selected
-  */
+   * This method opens a window with the information about the marker that has been selected
+   */
 
-  ctl.opendetail = function(event){
+  ctl.opendetail = function (event) {
     var item = event.sourceTarget.options.item;
-    var html = ""
+    var html = "";
     var row = 1;
     document.getElementById("storename").innerHTML = "";
-    for (key in ctl.group_keys){
-      if (key != null && key != "" && key != "birth_certificate" && key != "shape" && !key.toLowerCase().includes("photo") && item[key] != "" && item[key] != null){
-        if (key == "store_name"){
-          document.getElementById("storename").innerHTML = "<b>" + item[key] +"</br>";
+    for (key in ctl.group_keys) {
+      if (
+        key != null &&
+        key != "" &&
+        key != "birth_certificate" &&
+        key != "shape" &&
+        !key.toLowerCase().includes("photo") &&
+        item[key] != "" &&
+        item[key] != null
+      ) {
+        if (key == "store_name") {
+          document.getElementById("storename").innerHTML =
+            "<b>" + item[key] + "</br>";
         }
-        html += "<div class=''>"
-        html += "<div class='item-lab' style='grid-row:" + row + "'>" + key.charAt(0).toUpperCase() + key.slice(1).replace(/_/g, " ") + "</div>"
-        html += "<div class='item-content' style='grid-row:" + row + "'>" + item[key] + "</div>"
-        html += "</div>"
-      };
-    };
-    if (document.getElementById("storename").innerHTML == ""){
+        html += "<div class=''>";
+        html +=
+          "<div class='item-lab' style='grid-row:" +
+          row +
+          "'>" +
+          key.charAt(0).toUpperCase() +
+          key.slice(1).replace(/_/g, " ") +
+          "</div>";
+        html +=
+          "<div class='item-content' style='grid-row:" +
+          row +
+          "'>" +
+          item[key] +
+          "</div>";
+        html += "</div>";
+      }
+    }
+    if (document.getElementById("storename").innerHTML == "") {
       document.getElementById("storename").innerHTML = "Closed store";
     }
     document.getElementById("content").innerHTML = html;
@@ -131,10 +178,10 @@ app.init_map = function(ctl){
   };
 
   /*
-  * This method looks for the right icon to use and returns it's path
-  */
+   * This method looks for the right icon to use and returns it's path
+   */
 
-  ctl.getIcon = function(ateco){
+  ctl.getIcon = function (ateco) {
     switch (ateco) {
       case "00.00":
         return "public/generic.png";
@@ -259,5 +306,5 @@ app.init_map = function(ctl){
       case "96.04":
         return "public/pins/spa.png";
     }
-  }
-}
+  };
+};

@@ -11,21 +11,21 @@
   overflow-y: auto;
 }
 
-#content{
+#content {
   position: fixed;
   /*
     top: 50%;
     left: 50%;
     transform: translate(-50%, 1); 
   */
-  color:#fff;
-  display:grid;
+  color: #fff;
+  display: grid;
   grid-template-columns: 250px 250px;
   grid-template-rows: auto;
   margin: 20px;
 }
 
-.item-lab{
+.item-lab {
   grid-column-start: 1;
   grid-column-end: 1;
   font-weight: bold;
@@ -34,7 +34,7 @@
   /* width: 250px!important; */
 }
 
-.item-content{
+.item-content {
   grid-column-start: 2;
   grid-column-end: 2;
   margin: 10px;

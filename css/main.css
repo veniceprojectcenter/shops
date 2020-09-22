@@ -1,46 +1,54 @@
-html, body
-{
+html,
+body {
   height: 100%;
   width: 100%;
   margin: 0px;
-  font-family: 'Gilroy';
+  font-family: "Gilroy";
 }
 
-div,span,p,a,h1,h2,h3,h4,h5,h6{
-  font-family: 'Gilroy';
+div,
+span,
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Gilroy";
 }
 
-#map { 
-  height: calc( 100% - 61px );
+#map {
+  height: calc(100% - 61px);
   width: 100%;
-  z-index:1;
-} 
+  z-index: 1;
+}
 
 .iconBox {
-  background: rgba(255,255,255,0.8);
-  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
-  padding:6px;
+  padding: 6px;
   max-height: 20px;
   background-color: #000;
 }
 
-.leaflet-bottom{
-  bottom: 61px!important;
+.leaflet-bottom {
+  bottom: 61px !important;
 }
 
-#detail{
+#detail {
   color: white;
 }
 
-#iconField{
+#iconField {
   margin-left: 5px;
 }
 
-#category-choice{
+#category-choice {
   margin-left: 5px;
 }
-
 
 .multiselect {
   width: 200px;
@@ -48,19 +56,22 @@ div,span,p,a,h1,h2,h3,h4,h5,h6{
   z-index: 3;
 }
 
-.selectBox{
+.selectBox {
   position: relative;
   z-index: 2;
 }
 
-.selectBox select{
+.selectBox select {
   width: 100%;
   font-weight: bold;
 }
 
 .overSelect {
   position: absolute;
-  left: 0; right: 0; top: 0; bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 #checkboxes {
@@ -80,20 +91,11 @@ div,span,p,a,h1,h2,h3,h4,h5,h6{
   background-color: blue;
 }
 
-.ng-scope{
+.ng-scope {
   z-index: 0 !important;
 }
 
-.checkboxes{
+.checkboxes {
   height: 500px;
-  overflow:scroll;
+  overflow: scroll;
 }
-
-
-
-
-
-
-
-
-
