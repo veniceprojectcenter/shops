@@ -10,9 +10,9 @@ app.init_map = function (ctl) {
     });
     var zoomButton = L.control.zoom({ position: "bottomright" }).addTo(ctl.map);
     L.tileLayer(
-      "https://api.tiles.mapbox.com/v4/mapbox.run-bike-hike/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiY2l0eWtub3dsZWRnZSIsImEiOiJjaWw1YmluZWEwMGZ5d3VtNW1jdjdkd3kyIn0.7KtmSdDinGzAV4ioENVtNg",
+      "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2l0eWtub3dsZWRnZSIsImEiOiJjaWw1YmluZWEwMGZ5d3VtNW1jdjdkd3kyIn0.7KtmSdDinGzAV4ioENVtNg",
       {
-        foo: "bar",
+        id: 'mapbox/streets-v11',
         attribution:
           'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
       }
