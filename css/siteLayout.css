@@ -13,13 +13,4 @@ html, body{
 .site-body  {
     height: 90%;
     width: 100%;
-    background-color: red;
-}
-
-#page-title {
-    color: white;
-    margin: 0;
-    position: center;
-    height: 100%;
-    padding-top: 1.5vh;
 }
