@@ -5,14 +5,7 @@
     position: center;
     height: 100%;  
 }
-.site-body{
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-}
-
-#map{
-    z-index: -1;
-    width: 100%;
+.map{
     height: 100%;
+    background-color: tomato;
 }

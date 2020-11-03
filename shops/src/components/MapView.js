@@ -1,17 +1,16 @@
 import React, {Component} from 'react';
 import {MapContainer, TileLayer} from 'react-leaflet';
 
-class MapView extends Component{
-
-render() {
-    return (
-      <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false} id='map'>
-      <TileLayer
-        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
-    </MapContainer>
-    );
-}
+class MapView extends React.Component {
+  render(){
+      return (
+        <MapContainer style={{ height: "100%" }} center={[45.4359, 12.3355]} zoom={13.5} id='map'>
+        <TileLayer
+          attribution= 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+      </MapContainer>
+      );
+  }
 }
 export default MapView;

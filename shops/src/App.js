@@ -11,10 +11,11 @@ function App() {
         <h1 id="page-title">Shops by Venice Project Center</h1>
       </div>
       <div className="site-body">
-        <MapView/>
+        <div className= "map">
+        <MapView />
+        </div>
       </div>
     </div>
   );
 }
-
 export default App;
