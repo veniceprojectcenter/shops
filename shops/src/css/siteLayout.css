@@ -1,16 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 html, body, .content{
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
+    font-family: 'Arvo', serif;
+}
+.content{
+    display: flex;
+    flex-direction: column;
 }
 .site-header{
-    height: 10%;
-    width: 100%;
-    background-color: #3498DB;
+    flex: 0 1 auto;
+    height: fit-content;
+    background-color: black;
 }
-
+#page-title {
+    text-align: center;
+    color: white;
+    position: center;
+    height: auto;  
+    font-weight: 600;
+}
 .site-body{
-    height: 90%;
-    width: 100%;
+    flex: 1 1 auto;
 }
