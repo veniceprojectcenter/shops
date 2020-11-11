@@ -1,9 +1,14 @@
 
 #mapFilter{
-    bottom: 0;
-    left: 0;
+    top: 10vh;
+    right: 5vh;
     height: fit-content;
     width: fit-content;
-    background-color: tomato;
+    background-color: black;
     position: absolute;
+    display: flex;
+    flex-direction: row;
+}
+#filter-title{
+    padding: 5%;
 }

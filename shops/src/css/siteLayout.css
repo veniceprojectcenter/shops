@@ -6,6 +6,15 @@ html, body, .content{
     height: 100%;
     font-family: 'Arvo', serif;
 }
+h1{
+    font-size: 4vh;
+    font-weight: 800;
+    color: white;
+
+}
+h2{
+    color: white;
+}
 .content{
     display: flex;
     flex-direction: column;
@@ -13,14 +22,17 @@ html, body, .content{
 .site-header{
     flex: 0 1 auto;
     height: fit-content;
-    background-color: black;
+    background-color: black;    
+    display: flex;
+    justify-content: center;
+}
+#menu{
+    width: 3%;
+    height: auto;
 }
 #page-title {
     text-align: center;
-    color: white;
-    position: center;
-    height: auto;  
-    font-weight: 600;
+    margin: .25% auto;
 }
 .site-body{
     flex: 1 1 auto;
