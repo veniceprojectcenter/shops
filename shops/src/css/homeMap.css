@@ -1,14 +1,15 @@
 
 #mapFilter{
-    top: 10vh;
+    top: 0;
     right: 5vh;
+    transform: translateY(8vh);
     height: fit-content;
-    width: fit-content;
+    width: 15vw;
     background-color: black;
     position: absolute;
     display: flex;
     flex-direction: row;
 }
 #filter-title{
-    padding: 5%;
+    margin: auto;
 }

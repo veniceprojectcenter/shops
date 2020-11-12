@@ -1,15 +1,15 @@
 /* Position and sizing of burger button */
 .bm-burger-button {
 position: fixed;
-width: 36px;
+width: 40px;
 height: 30px;
-left: 0;
-top: 0;
+left: 1vh;
+top: 1.25vh;
 }
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-background: #373a47;
+background: #ffffff;
 }
 
 /* Color/shape of burger icon bars on hover*/
