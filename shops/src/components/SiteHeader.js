@@ -9,7 +9,7 @@ class SiteHeader extends React.Component{
         return(
             <div className="site-header">
                 <Sidebar pageWrapID={'site-body'} outerContainerId={'site-header'} />
-                <h1 id="page-title">Venice Shops</h1>
+                <h1 id="page-title">VENICE SHOPS</h1>
             </div>
         );
     }
