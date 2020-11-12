@@ -4,6 +4,7 @@ import MapFilter from './components/MapFilter';
 import SiteHeader from './components/SiteHeader';
 import './css/homeMap.css';
 import './css/siteLayout.css';
+import './css/sideBar.css';
 
 function App() {
   return (

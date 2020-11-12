@@ -1,11 +1,14 @@
 import React from 'react';
-import Menu from '../static/menu-white-24dp.svg';
+import Sidebar from './Sidebar';
+// import Menu from '../static/menu-white-24dp.svg';
 
 class SiteHeader extends React.Component{
+    
+
     render(){
         return(
             <div className="site-header">
-                <img id="menu" src={Menu} alt="Navigation Menu"/>
+                <Sidebar pageWrapID={'site-body'} outerContainerId={'site-header'} />
                 <h1 id="page-title">Venice Shops</h1>
             </div>
         );
