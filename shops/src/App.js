@@ -1,20 +1,24 @@
 import React from 'react';
-import MapView from './components/MapView';
-import MapFilter from './components/MapFilter';
+import MapPage from './pages/mapPage';
+import ReportsAndStatsPage from './pages/reportsStatsPage';
+import { BrowserRouter as Router, Switch,Route,Redirect} from "react-router-dom";
 import SiteHeader from './components/SiteHeader';
-import './css/homeMap.css';
-import './css/siteLayout.css';
-import './css/sideBar.css';
+import NotFoundPage from './pages/notFoundPage';
 
 function App() {
-  return (
+  return(
     <div className="content">
       <SiteHeader />
-      <div className="site-body">
-        <MapView />
-        <MapFilter />
-      </div>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={MapPage}/>
+          <Route exact path="/reportsandstats" component={ReportsAndStatsPage}/>
+          <Route exact path="/404"component={NotFoundPage}/>
+          <Redirect to="/404"/>
+        </Switch>
+      </Router>
     </div>
   );
+  
 }
 export default App;

@@ -1,6 +1,8 @@
 import React from 'react';
 import Sidebar from './Sidebar';
-// import Menu from '../static/menu-white-24dp.svg';
+import '../css/siteLayout.css';
+import '../css/sideBar.css';
+
 
 class SiteHeader extends React.Component{
     
