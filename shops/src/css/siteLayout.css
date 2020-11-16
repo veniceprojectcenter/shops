@@ -12,11 +12,7 @@ html, body, .content{
 h1{
     font-size: 4vh;
     font-weight: 700;
-    color: white;
 
-}
-h2{
-    color: white;
 }
 .content{
     display: flex;
@@ -36,6 +32,7 @@ h2{
 #page-title {
     text-align: center;
     margin: .25% auto;
+    color: white;
 }
 .site-body{
     flex: 1 1 auto;
