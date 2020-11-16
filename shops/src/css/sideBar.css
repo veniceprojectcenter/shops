@@ -46,7 +46,7 @@ font-size: 1.15em;
 
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
-fill: #373a47;
+fill: #ffffff;
 }
 
 /* Wrapper for item list */
@@ -62,7 +62,7 @@ display: inline-block;
 
 /* Styling of overlay */
 .bm-overlay {
-background: rgba(0, 0, 0, 0.3);
+background: #000000;
 }
 
 /* Individual item */
@@ -75,8 +75,13 @@ text-decoration: none;
 transition: color 0.2s;
 font-size: 3vh;
 font-weight: 500;
+border: none;
 }
 
 .bm-item:hover {
 color: royalblue;
+}
+
+.bm-item:focus {
+    outline: none;
 }

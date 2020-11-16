@@ -4,7 +4,7 @@ class MapFilter extends React.Component{
     render(){
         return(
             <div id="mapFilter">
-                <h2 id="filter-title"> Filters</h2>
+                <h1 id="filter-title"> Filters</h1>
             </div>
         );
     }

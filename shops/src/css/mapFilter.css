@@ -13,3 +13,6 @@
     margin: auto;
     color: white;
 }
+#filter-title:hover{
+    color: red;
+}

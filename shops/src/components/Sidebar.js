@@ -7,7 +7,7 @@ export default props => {
             <a className="menu-item" href="/">
                 Map
             </a>
-            <a className="menu-item" href="/statsandreports">
+            <a className="menu-item" href="/reportsandstats">
                 Reports and Statistics
             </a>
             <a className="menu-item" href="http://www.veniceprojectcenter.org/vpc">
