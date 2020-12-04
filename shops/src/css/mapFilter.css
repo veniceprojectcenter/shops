@@ -1,18 +1,54 @@
-#mapFilter{
-    top: 0;
-    right: 5vh;
+.Filter-Container{
     transform: translateY(8vh);
+    top: 0;
+    right: 3vh;
     height: fit-content;
     width: 15vw;
     background-color: black;
     position: absolute;
-    display: flex;
-    flex-direction: row;
 }
 #filter-title{
+    text-align: center;
     margin: auto;
     color: white;
+    margin-bottom: 4%;
 }
-#filter-title:hover{
-    color: red;
+.filter-type{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+}
+#filter-type{
+    text-align: center;
+    margin-top: 0;
+    color: white;
+}
+.radio{
+    margin-left:8%;
+    margin-right: 4%;
+}
+.radio-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.radio-year{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+#filter-year{
+    color: white;
+}
+.select{
+    margin: 0;
+    padding-bottom: 5vh;
+}
+.search{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
 }

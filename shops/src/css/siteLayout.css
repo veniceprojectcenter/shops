@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 html, body, .content{
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;    
 }
+/* Website uses the local font Gilroy, files in static folder  */
 @font-face{
     font-family: 'Gilroy';
     src: local('Gilroy'), url(../static/fonts/Gilroy-FREE/Gilroy-Light.otf) format('otf');

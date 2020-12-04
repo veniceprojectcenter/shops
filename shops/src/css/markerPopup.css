@@ -1,0 +1,44 @@
+/* Overrides leaflet's CSS
+File is the CSS for the map markers displayed on the site and their content */
+.shop .leaflet-popup-content-wrapper {
+    border: #565656;
+    border-style: solid;
+    border-radius: 3%;
+    width: 20vw;
+    background-color: #ffffff;
+}
+.shop .leaflet-popup-tip{
+    background: #565656;
+}
+
+h4.pop-up{
+    margin-top: 0;
+    margin-bottom: 5%;
+    font-size: 1.9vh;
+    text-align: center;
+}
+.image{
+    background-color: violet;
+    height: 18vh;
+}
+h5{
+    font-size: 1.75vh;
+    text-align: center;
+    margin-bottom: 3%;
+}
+h6{
+    color: #757575;
+    margin-top: 0;
+    font-size: 1.6vh;
+    text-align: center;
+}
+.full{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.split{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

@@ -1,8 +1,6 @@
 import React from 'react';
 import Sidebar from './Sidebar';
 import '../css/siteLayout.css';
-import '../css/sideBar.css';
-
 
 class SiteHeader extends React.Component{
     render(){

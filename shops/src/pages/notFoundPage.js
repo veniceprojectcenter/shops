@@ -1,6 +1,8 @@
 import React from "react";
 import '../css/404.css';
-
+/*
+Simple 404 page
+*/
 function NotFoundPage() {
     return(
         <div class="site-body">

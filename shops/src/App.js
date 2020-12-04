@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch,Route,Redirect} from "react-router-dom"
 import SiteHeader from './components/SiteHeader';
 import NotFoundPage from './pages/notFoundPage';
 
+/*All site direction handled here using React Router and displayed pages handled by respective component pages */
 function App() {
   return(
     <div className="content">
