@@ -6,7 +6,7 @@ import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
 
 
-function MapFilter(){
+function MapFilter({filter, setFilter}){
 
     //custom radio component to instead be colored white
     const WhiteRadio = withStyles({
@@ -20,18 +20,22 @@ function MapFilter(){
       })((props) => <Radio color="default" {...props} />);
     const animatedComponents= makeAnimated();
 
-    const [selectedValue, setSelectedValue] = React.useState('2018');
 
-    const handleChange = (event) =>{
-        setSelectedValue(event.target.value);
+    const handleYearChange = (event) => {
+        setFilter({year: event.target.value})
     }
-    
 
     const groupTypeOptions = [
         { value: 'Mixed', label: 'Mixed' },
         { value: 'Residential', label: 'Residential' },
         { value: 'Tourist', label: 'Tourist' }
     ]
+
+    const handleGroupTypeChange = (groupTypeOptions) => {
+        setFilter({groupType: groupTypeOptions})
+        console.log(filter.groupType)
+    }
+    
 
     return(
         <div className="Filter-Container">
@@ -42,9 +46,9 @@ function MapFilter(){
                     <div className="radio-row">
                         <div className="radio-year">
                             <WhiteRadio
-                                checked={selectedValue === '2004'}
-                                onChange={handleChange}
-                                value="2004"
+                                checked={filter.year == 2004}
+                                onChange={handleYearChange}
+                                value={2004}
                                 color="default"
                                 name="2004"
                                 inputProps={{ 'aria-label': '2004' }}
@@ -53,9 +57,9 @@ function MapFilter(){
                         </div>
                         <div className="radio-year">
                             <WhiteRadio
-                                checked={selectedValue === '2011'}
-                                onChange={handleChange}
-                                value="2011"
+                                checked={filter.year == 2011}
+                                onChange={handleYearChange}
+                                value={2011}
                                 color="default"
                                 name="2011"
                                 inputProps={{ 'aria-label': '2011' }}
@@ -66,9 +70,9 @@ function MapFilter(){
                     <div className="radio-row">
                         <div className="radio-year">
                             <WhiteRadio
-                                checked={selectedValue === '2005'}
-                                onChange={handleChange}
-                                value="2005"
+                                checked={filter.year == 2005}
+                                onChange={handleYearChange}
+                                value={2005}
                                 color="default"
                                 name="2005"
                                 inputProps={{ 'aria-label': '2005' }}
@@ -77,9 +81,9 @@ function MapFilter(){
                         </div>
                         <div className="radio-year">
                             <WhiteRadio
-                                checked={selectedValue === '2012'}
-                                onChange={handleChange}
-                                value="2012"
+                                checked={filter.year == 2012}
+                                onChange={handleYearChange}
+                                value={2012}
                                 color="default"
                                 name="2012"
                                 inputProps={{ 'aria-label': '2012' }}
@@ -90,9 +94,9 @@ function MapFilter(){
                     <div className="radio-row">
                         <div className="radio-year">
                             <WhiteRadio
-                                checked={selectedValue === '2009'}
-                                onChange={handleChange}
-                                value="2009"
+                                checked={filter.year == 2009}
+                                onChange={handleYearChange}
+                                value={2009}
                                 color="default"
                                 name="2009"
                                 inputProps={{ 'aria-label': '2009' }}
@@ -101,9 +105,9 @@ function MapFilter(){
                         </div>
                         <div className="radio-year">
                             <WhiteRadio
-                                checked={selectedValue === '2015'}
-                                onChange={handleChange}
-                                value="2015"
+                                checked={filter.year == 2015}
+                                onChange={handleYearChange}
+                                value={2015}
                                 color="default"
                                 name="2015"
                                 inputProps={{ 'aria-label': '2015' }}
@@ -114,9 +118,9 @@ function MapFilter(){
                     <div className="radio-row">
                         <div className="radio-year">
                             <WhiteRadio
-                                checked={selectedValue === '2010'}
-                                onChange={handleChange}
-                                value="2010"
+                                checked={filter.year == 2010}
+                                onChange={handleYearChange}
+                                value={2010}
                                 color="default"
                                 name="2010"
                                 inputProps={{ 'aria-label': '2010' }}
@@ -125,9 +129,9 @@ function MapFilter(){
                         </div>
                         <div className="radio-year">
                             <WhiteRadio
-                                checked={selectedValue === '2018'}
-                                onChange={handleChange}
-                                value="2018"
+                                checked={filter.year == 2018}
+                                onChange={handleYearChange}
+                                value={2018}
                                 color="default"
                                 name="2018"
                                 inputProps={{ 'aria-label': '2018' }}
@@ -143,7 +147,7 @@ function MapFilter(){
                 </div>
                 <div className="filter-type select">
                     <h2 id="filter-type"> Group Type</h2>
-                    <Select isMulti components={animatedComponents} options={groupTypeOptions} className="search" classNamePrefix="shopType" controlShouldRenderValue="true" />
+                    <Select isMulti components={animatedComponents} options={groupTypeOptions} onChange={handleGroupTypeChange} className="search" classNamePrefix="shopType" controlShouldRenderValue="true" />
                 </div>
         </div>
     );

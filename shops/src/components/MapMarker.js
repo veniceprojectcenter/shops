@@ -11,14 +11,29 @@ let DefaultIcon = L.icon({
     iconUrl: MarkerIcon,
   });
 
-function MapMarker(){
+function MapMarker({ filter }) {
+    const shopsLocations = Shops.map(shop =>({
+        ...Locations.find((location) => (location.parent_id == shop.parent_id) && location), ...shop
+        }));
+
+
+    const [data, setData] = React.useState(shopsLocations);
+    console.log(data);
+
+    const filterUpdate = React.useEffect(() => {
+        setData(shopsLocations.filter(element => 
+            element.year_collected == filter.year
+        ))
+    }, [filter]);
+
     
     return( 
         <div>
-            {Locations.map(locationData=>(
-                <Marker position={[locationData.lat,locationData.lng]} icon={DefaultIcon}>
+            {data.map((shopsData, index)=>(
+
+                <Marker position={[shopsData.lat, shopsData.lng]} icon={DefaultIcon} key={index}>
                         <Popup className="shop" maxWidth="98%">
-                                <h4 class="pop-up">test</h4>
+                            <h4 class="pop-up">{shopsData.store_name}</h4>
                                 <div class= "image">
                                 {/* Image caroseul placeholder */}
                                 </div>
