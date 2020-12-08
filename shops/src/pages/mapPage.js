@@ -6,14 +6,21 @@ import '../css/mapFilter.css';
 /*Component Javascript file that houses the entire map/home screen of the website */
 function MapPage() {
     const [filter, setFilter] = React.useState({
-        year: 2018,
+        selected2004: false,
+        selected2005: false,
+        selected2009: false,
+        selected2010: false,
+        selected2011: false,
+        selected2012: false,
+        selected2015: false,
+        selected2018: true,
         shopType: [],
         groupType: []
     });
-    console.log(filter.year)
+
     return (
         <div className="site-body">
-            <MapView filter={filter} setFilter={setFilter} />
+            <MapView filter={filter}/>
             <MapFilter filter={filter} setFilter={setFilter} />
         </div>
     );

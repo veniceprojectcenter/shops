@@ -1,29 +1,102 @@
 import React from 'react';
 import { withStyles} from "@material-ui/core/styles";
-import { grey } from '@material-ui/core/colors';
-import Radio from "@material-ui/core/Radio";
+import { grey, teal, indigo, red, deepPurple, pink, brown, orange, green } from '@material-ui/core/colors';
+// import Radio from "@material-ui/core/Radio";
 import Select from 'react-select';
+import Checkbox  from '@material-ui/core/Checkbox';
 import makeAnimated from 'react-select/animated';
+
 
 
 function MapFilter({filter, setFilter}){
 
-    //custom radio component to instead be colored white
-    const WhiteRadio = withStyles({
+    
+    const Checkbox2004 = withStyles({
         root: {
-          color: grey[50],
-          '&$checked': {
             color: grey[50],
+          '&$checked': {
+            color: teal[600],
           },
         },
         checked: {},
-      })((props) => <Radio color="default" {...props} />);
-    const animatedComponents= makeAnimated();
+    })((props) => <Checkbox color="default" {...props} />);
+     
+    const Checkbox2005 = withStyles({
+        root: {
+            color: grey[50],
+          '&$checked': {
+            color: indigo[600],
+          },
+        },
+        checked: {},
+    })((props) => <Checkbox color="default" {...props} />);
+
+    const Checkbox2009 = withStyles({
+        root: {
+            color: grey[50],
+          '&$checked': {
+            color: red[600],
+          },
+        },
+        checked: {},
+    })((props) => <Checkbox color="default" {...props} />);
+     
+    const Checkbox2010 = withStyles({
+        root: {
+            color: grey[50],
+          '&$checked': {
+            color: deepPurple[600],
+          },
+        },
+        checked: {},
+    })((props) => <Checkbox color="default" {...props} />);
+
+    const Checkbox2011 = withStyles({
+        root: {
+            color: grey[50],
+          '&$checked': {
+            color: pink[600],
+          },
+        },
+        checked: {},
+    })((props) => <Checkbox color="default" {...props} />);
+     
+    const Checkbox2012 = withStyles({
+        root: {
+            color: grey[50],
+          '&$checked': {
+            color: brown[600],
+          },
+        },
+        checked: {},
+    })((props) => <Checkbox color="default" {...props} />);
+    
+    const Checkbox2015 = withStyles({
+        root: {
+            color: grey[50],
+          '&$checked': {
+            color: orange[600],
+          },
+        },
+        checked: {},
+    })((props) => <Checkbox color="default" {...props} />);
+     
+    const Checkbox2018 = withStyles({
+        root: {
+            color: grey[50],
+          '&$checked': {
+            color: green[600],
+          },
+        },
+        checked: {},
+    })((props) => <Checkbox color="default" {...props} />);
 
 
     const handleYearChange = (event) => {
-        setFilter({year: event.target.value})
-    }
+        setFilter({ ...filter, [event.target.name]: event.target.checked});
+    };
+
+    const animatedComponents= makeAnimated();
 
     const groupTypeOptions = [
         { value: 'Mixed', label: 'Mixed' },
@@ -33,7 +106,6 @@ function MapFilter({filter, setFilter}){
 
     const handleGroupTypeChange = (groupTypeOptions) => {
         setFilter({groupType: groupTypeOptions})
-        console.log(filter.groupType)
     }
     
 
@@ -45,97 +117,41 @@ function MapFilter({filter, setFilter}){
                     <div className="radio">
                     <div className="radio-row">
                         <div className="radio-year">
-                            <WhiteRadio
-                                checked={filter.year == 2004}
-                                onChange={handleYearChange}
-                                value={2004}
-                                color="default"
-                                name="2004"
-                                inputProps={{ 'aria-label': '2004' }}
-                            />
+                            <Checkbox2004 checked={filter.selected2004} onChange={handleYearChange} name="selected2004"/>
                             <h3 id="filter-year">2004</h3>
                         </div>
                         <div className="radio-year">
-                            <WhiteRadio
-                                checked={filter.year == 2011}
-                                onChange={handleYearChange}
-                                value={2011}
-                                color="default"
-                                name="2011"
-                                inputProps={{ 'aria-label': '2011' }}
-                            />
-                            <h3 id="filter-year">2011</h3>
+                            <Checkbox2005 checked={filter.selected2005} onChange={handleYearChange} name="selected2005"/>
+                            <h3 id="filter-year">2005</h3>
                         </div>
                     </div>
                     <div className="radio-row">
                         <div className="radio-year">
-                            <WhiteRadio
-                                checked={filter.year == 2005}
-                                onChange={handleYearChange}
-                                value={2005}
-                                color="default"
-                                name="2005"
-                                inputProps={{ 'aria-label': '2005' }}
-                            />
-                            <h3 id="filter-year">2005</h3>
+                            <Checkbox2009 checked={filter.selected2009} onChange={handleYearChange} name="selected2009"/>
+                            <h3 id="filter-year">2009</h3>
                         </div>
                         <div className="radio-year">
-                            <WhiteRadio
-                                checked={filter.year == 2012}
-                                onChange={handleYearChange}
-                                value={2012}
-                                color="default"
-                                name="2012"
-                                inputProps={{ 'aria-label': '2012' }}
-                            />
+                            <Checkbox2010 checked={filter.selected2010} onChange={handleYearChange} name="selected2010"/>
+                            <h3 id="filter-year">2010</h3>
+                        </div>
+                    </div>
+                    <div className="radio-row">
+                        <div className="radio-year">
+                            <Checkbox2011 checked={filter.selected2011} onChange={handleYearChange} name="selected2011"/>
+                            <h3 id="filter-year">2011</h3>
+                        </div>
+                        <div className="radio-year">
+                            <Checkbox2012 checked={filter.selected2012} onChange={handleYearChange} name="selected2012"/>
                             <h3 id="filter-year">2012</h3>
                         </div>
                     </div>
                     <div className="radio-row">
                         <div className="radio-year">
-                            <WhiteRadio
-                                checked={filter.year == 2009}
-                                onChange={handleYearChange}
-                                value={2009}
-                                color="default"
-                                name="2009"
-                                inputProps={{ 'aria-label': '2009' }}
-                            />
-                            <h3 id="filter-year">2009</h3>
-                        </div>
-                        <div className="radio-year">
-                            <WhiteRadio
-                                checked={filter.year == 2015}
-                                onChange={handleYearChange}
-                                value={2015}
-                                color="default"
-                                name="2015"
-                                inputProps={{ 'aria-label': '2015' }}
-                            />
+                            <Checkbox2015 checked={filter.selected2015} onChange={handleYearChange} name="selected2015"/>
                             <h3 id="filter-year">2015</h3>
                         </div>
-                    </div>
-                    <div className="radio-row">
                         <div className="radio-year">
-                            <WhiteRadio
-                                checked={filter.year == 2010}
-                                onChange={handleYearChange}
-                                value={2010}
-                                color="default"
-                                name="2010"
-                                inputProps={{ 'aria-label': '2010' }}
-                            />
-                            <h3 id="filter-year">2010</h3>
-                        </div>
-                        <div className="radio-year">
-                            <WhiteRadio
-                                checked={filter.year == 2018}
-                                onChange={handleYearChange}
-                                value={2018}
-                                color="default"
-                                name="2018"
-                                inputProps={{ 'aria-label': '2018' }}
-                            />
+                            <Checkbox2018 checked={filter.selected2018} onChange={handleYearChange} name="selected2018"/>
                             <h3 id="filter-year">2018</h3>
                         </div>
                     </div>
