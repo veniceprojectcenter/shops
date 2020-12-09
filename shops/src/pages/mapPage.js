@@ -12,7 +12,7 @@ function MapPage() {
         selected2010: false,
         selected2011: false,
         selected2012: false,
-        selected2015: false,
+        selected2015: true,
         selected2018: true,
         shopType: [],
         groupType: [

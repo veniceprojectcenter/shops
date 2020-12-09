@@ -11,7 +11,7 @@ function App() {
       <SiteHeader />
       <Router>
         <Switch>
-          <Route exact path="/shops" component={MapPage}/>
+          <Route exact path="/" component={MapPage}/>
           <Route exact path="/404"component={NotFoundPage}/>
           <Redirect to="/404"/>
         </Switch>
