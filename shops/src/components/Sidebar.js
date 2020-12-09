@@ -12,7 +12,7 @@ if it ever needed to be reveresed.
 export default props => {
     return (
         <Menu>
-            <a className="menu-item" href="/">
+            <a className="menu-item" href="/shops">
                 Map
             </a>
             <a className="menu-item" href="https://sites.google.com/view/ve20-comm/home?authuser=2">

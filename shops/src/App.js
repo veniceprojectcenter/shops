@@ -11,9 +11,9 @@ function App() {
       <SiteHeader />
       <Router>
         <Switch>
-          <Route exact path="/" component={MapPage}/>
-          <Route exact path="/404"component={NotFoundPage}/>
-          <Redirect to="/404"/>
+          <Route exact path="/shops" component={MapPage}/>
+          <Route exact path="/shops/404"component={NotFoundPage}/>
+          <Redirect to="/shops/404"/>
         </Switch>
       </Router>
     </div>
