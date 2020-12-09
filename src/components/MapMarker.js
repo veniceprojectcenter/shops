@@ -73,7 +73,7 @@ function MapMarker({ filter }) {
     
     
 
-    const filterUpdate = React.useEffect(() => {
+    React.useEffect(() => {
             setData(shopsLocations.filter(element => {
                 if(filter.groupType.some(type => type.value === element.group_type) || filter.shopType.some(type => type.value === element.store_type)){
                     if(filter.selected2004 === true && element.year_collected === 2004){
@@ -101,8 +101,9 @@ function MapMarker({ filter }) {
                         return element
                     }
                 }
+                return false;
             }))
-    }, [filter]);
+    }, [filter, shopsLocations]);
 
     
     return( 

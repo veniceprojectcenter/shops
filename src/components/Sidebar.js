@@ -9,7 +9,7 @@ Only modification to note is that this navigation menu doesn't support Google's 
 features due to overidden modifications in sideBar.css. The library does inherently support it
 if it ever needed to be reveresed. 
 */
-export default props => {
+const Sidebar = () => {
     return (
         <Menu>
             <a className="menu-item" href="/">
@@ -27,3 +27,5 @@ export default props => {
         </Menu>
     );
 };
+
+export default Sidebar;

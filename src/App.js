@@ -1,6 +1,6 @@
 import React from 'react';
 import MapPage from './pages/mapPage';
-import { BrowserRouter as Router, Switch,Route,Redirect} from "react-router-dom";
+import { BrowserRouter as Router, Switch,Route} from "react-router-dom";
 import SiteHeader from './components/SiteHeader';
 import NotFoundPage from './pages/notFoundPage';
 
@@ -11,9 +11,8 @@ function App() {
       <SiteHeader />
       <Router>
         <Switch>
-          <Route exact path="/" component={MapPage}/>
-          <Route exact path="/404"component={NotFoundPage}/>
-          <Redirect to="/404"/>
+          <Route exact path="/" component={MapPage} />
+          <Route component={NotFoundPage} />
         </Switch>
       </Router>
     </div>
