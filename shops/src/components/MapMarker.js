@@ -17,6 +17,7 @@ import Locations from "../data/store_locations.json";
 
 
 function MapMarker({ filter }) {
+
     const shopsLocations = Shops.map(shop =>({
         ...Locations.find((location) => (shop.parent_id === location.parent_id)),...shop 
         }));
@@ -73,33 +74,34 @@ function MapMarker({ filter }) {
     
 
     const filterUpdate = React.useEffect(() => {
-        setData(shopsLocations.filter(element => {
-            if(filter.selected2004 === true && element.year_collected === 2004){
-                return element
-            }
-            if(filter.selected2005 === true && element.year_collected === 2005){
-                return element
-            }
-            if(filter.selected2009 === true && element.year_collected === 2009){
-                return element
-            }
-            if(filter.selected2010 === true && element.year_collected === 2010){
-                return element
-            }
-            if(filter.selected2011 === true && element.year_collected === 2011){
-                return element
-            }
-            if(filter.selected2012 === true && element.year_collected === 2012){
-                return element
-            }
-            if(filter.selected2015 === true && element.year_collected === 2015){
-                return element
-            }
-            if(filter.selected2018 === true && element.year_collected === 2018){
-                return element
-            }
-        }
-        ))
+            setData(shopsLocations.filter(element => {
+                if(filter.groupType.some(type => type.value === element.group_type) || filter.shopType.some(type => type.value === element.store_type)){
+                    if(filter.selected2004 === true && element.year_collected === 2004){
+                        return element
+                    }
+                    if(filter.selected2005 === true && element.year_collected === 2005){
+                        return element
+                    }
+                    if(filter.selected2009 === true && element.year_collected === 2009){
+                        return element
+                    }
+                    if(filter.selected2010 === true && element.year_collected === 2010){
+                        return element
+                    }
+                    if(filter.selected2011 === true && element.year_collected === 2011){
+                        return element
+                    }
+                    if(filter.selected2012 === true && element.year_collected === 2012){
+                        return element
+                    }
+                    if(filter.selected2015 === true && element.year_collected === 2015){
+                        return element
+                    }
+                    if(filter.selected2018 === true && element.year_collected === 2018){
+                        return element
+                    }
+                }
+            }))
     }, [filter]);
 
     

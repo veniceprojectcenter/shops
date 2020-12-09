@@ -1,0 +1,478 @@
+[
+  {
+    "value": "Accessories",
+    "label": "Accessories"
+  },
+  {
+    "value": "Antiques",
+    "label": "Antiques"
+  },
+  {
+    "value": "Apartment Rental",
+    "label": "Apartment Rental"
+  },
+  {
+    "value": "Art",
+    "label": "Art"
+  },
+  {
+    "value": "Art Gallery",
+    "label": "Art Gallery"
+  },
+  {
+    "value": "Bakery",
+    "label": "Bakery"
+  },
+  {
+    "value": "Bank",
+    "label": "Bank"
+  },
+  {
+    "value": "Bar",
+    "label": "Bar"
+  },
+  {
+    "value": "Barber",
+    "label": "Barber"
+  },
+  {
+    "value": "Bed and Breakfast",
+    "label": "Bed and Breakfast"
+  },
+  {
+    "value": "Boat Supplies",
+    "label": "Boat Supplies"
+  },
+  {
+    "value": "Books",
+    "label": "Books"
+  },
+  {
+    "value": "Butcher",
+    "label": "Butcher"
+  },
+  {
+    "value": "Cafe",
+    "label": "Cafe"
+  },
+  {
+    "value": "Candy",
+    "label": "Candy"
+  },
+  {
+    "value": "Car Rental",
+    "label": "Car Rental"
+  },
+  {
+    "value": "Casino",
+    "label": "Casino"
+  },
+  {
+    "value": "Children's Clothing",
+    "label": "Children's Clothing"
+  },
+  {
+    "value": "Closed",
+    "label": "Closed"
+  },
+  {
+    "value": "Clothing",
+    "label": "Clothing"
+  },
+  {
+    "value": "Coffee",
+    "label": "Coffee"
+  },
+  {
+    "value": "Coins and Stamps",
+    "label": "Coins and Stamps"
+  },
+  {
+    "value": "Computer",
+    "label": "Computer"
+  },
+  {
+    "value": "Computer Services",
+    "label": "Computer Services"
+  },
+  {
+    "value": "Cosmetics",
+    "label": "Cosmetics"
+  },
+  {
+    "value": "Costumes",
+    "label": "Costumes"
+  },
+  {
+    "value": "Dairy",
+    "label": "Dairy"
+  },
+  {
+    "value": "Delivery",
+    "label": "Delivery"
+  },
+  {
+    "value": "Dry Cleaner",
+    "label": "Dry Cleaner"
+  },
+  {
+    "value": "Electrical Appliances",
+    "label": "Electrical Appliances"
+  },
+  {
+    "value": "Electronics",
+    "label": "Electronics"
+  },
+  {
+    "value": "Electronics Repair",
+    "label": "Electronics Repair"
+  },
+  {
+    "value": "Entertainment",
+    "label": "Entertainment"
+  },
+  {
+    "value": "Exchange",
+    "label": "Exchange"
+  },
+  {
+    "value": "Eyewear",
+    "label": "Eyewear"
+  },
+  {
+    "value": "Fast Food",
+    "label": "Fast Food"
+  },
+  {
+    "value": "Film Studio",
+    "label": "Film Studio"
+  },
+  {
+    "value": "Fishing",
+    "label": "Fishing"
+  },
+  {
+    "value": "Fitness",
+    "label": "Fitness"
+  },
+  {
+    "value": "Florist",
+    "label": "Florist"
+  },
+  {
+    "value": "Funeral Services",
+    "label": "Funeral Services"
+  },
+  {
+    "value": "Furniture",
+    "label": "Furniture"
+  },
+  {
+    "value": "Gelateria",
+    "label": "Gelateria"
+  },
+  {
+    "value": "General Store",
+    "label": "General Store"
+  },
+  {
+    "value": "Glass",
+    "label": "Glass"
+  },
+  {
+    "value": "Gloves",
+    "label": "Gloves"
+  },
+  {
+    "value": "Graphic Design",
+    "label": "Graphic Design"
+  },
+  {
+    "value": "Grocery Store",
+    "label": "Grocery Store"
+  },
+  {
+    "value": "Guest Houses",
+    "label": "Guest Houses"
+  },
+  {
+    "value": "Hair Salon",
+    "label": "Hair Salon"
+  },
+  {
+    "value": "Hardware",
+    "label": "Hardware"
+  },
+  {
+    "value": "Hospital",
+    "label": "Hospital"
+  },
+  {
+    "value": "Hostel",
+    "label": "Hostel"
+  },
+  {
+    "value": "Hotel",
+    "label": "Hotel"
+  },
+  {
+    "value": "Hotel with Restaurant",
+    "label": "Hotel with Restaurant"
+  },
+  {
+    "value": "Household Goods",
+    "label": "Household Goods"
+  },
+  {
+    "value": "Jewelry",
+    "label": "Jewelry"
+  },
+  {
+    "value": "Jewelry Repair",
+    "label": "Jewelry Repair"
+  },
+  {
+    "value": "Knives",
+    "label": "Knives"
+  },
+  {
+    "value": "Laundromat",
+    "label": "Laundromat"
+  },
+  {
+    "value": "Leather Goods",
+    "label": "Leather Goods"
+  },
+  {
+    "value": "Leather Repair",
+    "label": "Leather Repair"
+  },
+  {
+    "value": "Library",
+    "label": "Library"
+  },
+  {
+    "value": "Light Store",
+    "label": "Light Store"
+  },
+  {
+    "value": "Liquor",
+    "label": "Liquor"
+  },
+  {
+    "value": "Luxury",
+    "label": "Luxury"
+  },
+  {
+    "value": "Mask",
+    "label": "Mask"
+  },
+  {
+    "value": "Masseuse",
+    "label": "Masseuse"
+  },
+  {
+    "value": "Medical Goods",
+    "label": "Medical Goods"
+  },
+  {
+    "value": "Men's Clothing",
+    "label": "Men's Clothing"
+  },
+  {
+    "value": "Metal Work",
+    "label": "Metal Work"
+  },
+  {
+    "value": "Money Transfer",
+    "label": "Money Transfer"
+  },
+  {
+    "value": "Movie Theater",
+    "label": "Movie Theater"
+  },
+  {
+    "value": "Music",
+    "label": "Music"
+  },
+  {
+    "value": "Musical Instruments",
+    "label": "Musical Instruments"
+  },
+  {
+    "value": "Nail Salon",
+    "label": "Nail Salon"
+  },
+  {
+    "value": "Newspaper",
+    "label": "Newspaper"
+  },
+  {
+    "value": "Office Supplies",
+    "label": "Office Supplies"
+  },
+  {
+    "value": "Other Retail",
+    "label": "Other Retail"
+  },
+  {
+    "value": "Pawn Shop",
+    "label": "Pawn Shop"
+  },
+  {
+    "value": "Perfume",
+    "label": "Perfume"
+  },
+  {
+    "value": "Pet Store",
+    "label": "Pet Store"
+  },
+  {
+    "value": "Pharmacy",
+    "label": "Pharmacy"
+  },
+  {
+    "value": "Photo Store",
+    "label": "Photo Store"
+  },
+  {
+    "value": "Photocopy",
+    "label": "Photocopy"
+  },
+  {
+    "value": "Photographer",
+    "label": "Photographer"
+  },
+  {
+    "value": "Picture Frames",
+    "label": "Picture Frames"
+  },
+  {
+    "value": "Pizzeria",
+    "label": "Pizzeria"
+  },
+  {
+    "value": "Post Office",
+    "label": "Post Office"
+  },
+  {
+    "value": "Printing",
+    "label": "Printing"
+  },
+  {
+    "value": "Produce",
+    "label": "Produce"
+  },
+  {
+    "value": "Radio and Television",
+    "label": "Radio and Television"
+  },
+  {
+    "value": "Real Estate",
+    "label": "Real Estate"
+  },
+  {
+    "value": "Repair",
+    "label": "Repair"
+  },
+  {
+    "value": "Restaurant",
+    "label": "Restaurant"
+  },
+  {
+    "value": "Seafood",
+    "label": "Seafood"
+  },
+  {
+    "value": "Shoes",
+    "label": "Shoes"
+  },
+  {
+    "value": "Souvenirs",
+    "label": "Souvenirs"
+  },
+  {
+    "value": "Spa",
+    "label": "Spa"
+  },
+  {
+    "value": "Sporting Goods",
+    "label": "Sporting Goods"
+  },
+  {
+    "value": "Stall",
+    "label": "Stall"
+  },
+  {
+    "value": "Stationery",
+    "label": "Stationery"
+  },
+  {
+    "value": "Study Agency",
+    "label": "Study Agency"
+  },
+  {
+    "value": "Swim",
+    "label": "Swim"
+  },
+  {
+    "value": "Tailor",
+    "label": "Tailor"
+  },
+  {
+    "value": "Tattoo and Piercing",
+    "label": "Tattoo and Piercing"
+  },
+  {
+    "value": "Textiles",
+    "label": "Textiles"
+  },
+  {
+    "value": "Tobacco",
+    "label": "Tobacco"
+  },
+  {
+    "value": "Toys",
+    "label": "Toys"
+  },
+  {
+    "value": "Transportation",
+    "label": "Transportation"
+  },
+  {
+    "value": "Travel Agency",
+    "label": "Travel Agency"
+  },
+  {
+    "value": "Undefined",
+    "label": "Undefined"
+  },
+  {
+    "value": "Undergarments",
+    "label": "Undergarments"
+  },
+  {
+    "value": "Veterinarian",
+    "label": "Veterinarian"
+  },
+  {
+    "value": "Warehouse",
+    "label": "Warehouse"
+  },
+  {
+    "value": "Wedding",
+    "label": "Wedding"
+  },
+  {
+    "value": "Wine",
+    "label": "Wine"
+  },
+  {
+    "value": "Women's Clothing",
+    "label": "Women's Clothing"
+  },
+  {
+    "value": "Wood Work",
+    "label": "Wood Work"
+  }
+]

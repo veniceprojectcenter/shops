@@ -1,0 +1,14 @@
+[
+    { 
+        "value": "Mixed",
+        "label": "Mixed" 
+    },
+    { 
+        "value": "Residential",
+        "label": "Residential" 
+    },
+    {   
+        "value": "Tourist",
+        "label": "Tourist" 
+    }
+]

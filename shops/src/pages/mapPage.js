@@ -14,8 +14,16 @@ function MapPage() {
         selected2012: false,
         selected2015: false,
         selected2018: true,
-        shopType: [],
-        groupType: []
+        shopType: [
+            { value: 'Mixed', label: 'Mixed' },
+            { value: 'Residential', label: 'Residential' },
+            { value: 'Tourist', label: 'Tourist' }
+        ],
+        groupType: [
+            { value: 'Mixed', label: 'Mixed' },
+            { value: 'Residential', label: 'Residential' },
+            { value: 'Tourist', label: 'Tourist' }
+        ]
     });
 
     return (
