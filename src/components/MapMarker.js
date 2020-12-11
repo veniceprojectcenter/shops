@@ -130,9 +130,6 @@ function MapMarker({ filter }) {
                 key={index}>
                         <Popup className="shop" maxWidth="98%">
                             <h4 className="pop-up">{shopsData.store_name}</h4>
-                            <div className= "image">
-                            {/* Image caroseul placeholder */}
-                            </div>
                             <h5>Address</h5>
                             <h6>{shopsData.address_street}</h6>
                             <h5>Year collected</h5>
