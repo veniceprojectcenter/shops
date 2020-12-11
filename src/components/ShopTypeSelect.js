@@ -2,6 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import { default as ReactSelect } from "react-select";
 
+/**
+ * ShopTypeSelect
+ * Overriding the select component from reac-select to allow for select-all feature
+ * Works with any variable dataset of options loaded into component
+ */
 const ShopTypeSelect = props => {
   if (props.allowSelectAll) {
     return (

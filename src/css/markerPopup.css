@@ -1,5 +1,5 @@
-/* Overrides leaflet's CSS
-File is the CSS for the map markers displayed on the site and their content */
+/*  Overrides leaflet's CSS 
+    File is the CSS for the map markers displayed on the site and their content */
 .shop .leaflet-popup-content-wrapper {
     border: #565656;
     border-style: solid;
@@ -17,6 +17,7 @@ h4.pop-up{
     font-size: 1.9vh;
     text-align: center;
 }
+/* Temporary image container */
 .image{
     background-color: violet;
     height: 18vh;

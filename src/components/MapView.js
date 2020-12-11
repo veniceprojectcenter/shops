@@ -3,9 +3,11 @@ import {MapContainer, TileLayer} from 'react-leaflet';
 import MapMarker from '../components/MapMarker';
 
 
-/*
-React Component to display the map of Venice using react-leaflet and pulling the map from the team's mapbox account
-*/
+/**
+ * MapView(filter)
+ * Component to display the map of Venice using react-leaflet and pulling the map tiles from mapbox currently
+ * Calls MapMarker component to render markers over tilelayer when Filter statehook changes
+ */
 
 function MapView({filter}) {
   return (

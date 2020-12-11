@@ -14,7 +14,14 @@ import "../css/markerPopup.css";
 import Shops from "../data/venice_shops.json";
 import Locations from "../data/store_locations.json";
 
-
+/**
+ * MapMarker(filter)
+ * Component creates variable markers to be view over tilelayer in parent component
+ *
+ * Builds unifie array of Store Locations and Venice Shops based on foreign key relation
+ * 
+ * Filters array to then generate markers from temporary array using the state hook named data
+ */
 
 function MapMarker({ filter }) {
 
@@ -24,7 +31,7 @@ function MapMarker({ filter }) {
     
     const [data, setData] = React.useState(shopsLocations);
 
-    
+    //Generating the various marker colors for each year 
     const iconDefault = L.icon({
         iconSize: [30, 35],
         iconUrl: MarkerDefault,
@@ -69,10 +76,10 @@ function MapMarker({ filter }) {
         iconSize: [30, 35],
         iconUrl: Marker2018,
     });
+    //--------------------------------------
     
     
-    
-
+    //Builds temporary array by setting data equal to filtered options of combined dataset
     React.useEffect(() => {
             setData(shopsLocations.filter(element => {
                 if(filter.groupType.some(type => type.value === element.group_type) || filter.shopType.some(type => type.value === element.store_type)){

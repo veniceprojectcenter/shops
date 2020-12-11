@@ -12,6 +12,7 @@ We'd liked to finally thank all past and future contributors to this repository!
 Thank you!
 
 The VE20-COMM team
+
 -Lucas Fernandes, Kavim Bhatnagar, Taylor Ostrum, and Nathan Morin
 
 
