@@ -1,3 +1,4 @@
+/* CSS styles for application layout, imported in App.js to be used across application */
 html, body, .content{
     margin: 0;
     padding: 0;

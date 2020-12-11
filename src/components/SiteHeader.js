@@ -1,7 +1,9 @@
 import React from 'react';
 import Sidebar from './Sidebar';
-import '../css/siteLayout.css';
-
+/**
+ * SiteHeader()
+ * Component for sitewide header, includes sidebar navigation component
+ */
 function SiteHeader(){
     return(
         <div className="site-header">

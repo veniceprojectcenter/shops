@@ -2,13 +2,14 @@ import React from 'react';
 import {slide as Menu} from 'react-burger-menu';
 import '../css/sideBar.css';
 
-/*
-Javascript file to generate the sidebar navigation menu. Using the React burger menu library
-all aspects of the navigation menu are generated here as well in the respective CSS file.
-Only modification to note is that this navigation menu doesn't support Google's accessibility
-features due to overidden modifications in sideBar.css. The library does inherently support it
-if it ever needed to be reveresed. 
-*/
+/**
+ * Sidebar
+ * Component to generate the sidebar navigation menu. Using the react-burger-menu library
+ * all aspects of the navigation menu are generated here as well in the respective CSS file.
+ * Only modification to note is that this navigation menu doesn't support Google's accessibility
+ * features due to overidden modifications in sideBar.css. The library does inherently support it
+ * if it ever needed to be reveresed. 
+ */
 const Sidebar = () => {
     return (
         <Menu>
@@ -27,5 +28,4 @@ const Sidebar = () => {
         </Menu>
     );
 };
-
 export default Sidebar;

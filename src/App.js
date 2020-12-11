@@ -1,10 +1,17 @@
 import React from 'react';
-import MapPage from './pages/mapPage';
 import { BrowserRouter as Router, Switch,Route} from "react-router-dom";
+import '../css/siteLayout.css';
 import SiteHeader from './components/SiteHeader';
+import MapPage from './pages/mapPage';
 import NotFoundPage from './pages/notFoundPage';
 
-/*All site direction handled here using React Router and displayed pages handled by respective component pages */
+/**
+ *                                               Venice Shops Application 
+ * App()
+ * All site direction handled here using React Router.
+ * All displayed pages handled by their respective component pages.
+ * 
+ */
 function App() {
   return(
     <div className="content">
