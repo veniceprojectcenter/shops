@@ -26,16 +26,16 @@
     margin-top: 0;
     color: white;
 }
-.radio{
+.checkbox{
     margin-left:8%;
     margin-right: 4%;
 }
-.radio-row{
+.checkbox-row{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
-.radio-year{
+.checkbox-year{
     display: flex;
     flex-direction: row;
     width: 50%;

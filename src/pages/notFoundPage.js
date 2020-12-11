@@ -1,7 +1,8 @@
 import React from "react";
 import '../css/404.css';
-/*
-Simple 404 page
+/**
+ * NotFoundPage()
+ * Used as backup in router to re-direct user when 404 error is encountered
 */
 function NotFoundPage() {
     return(

@@ -3,8 +3,13 @@ import MapFilter from '../components/MapFilter';
 import MapView from '../components/MapView';
 import '../css/mapFilter.css';
 
-/*Component Javascript file that houses the entire map/home screen of the website */
+/**
+ * MapPage()
+ * Component for the entire map/home screen of the website and it's child components
+ * Declares filter state hook which tracks filter selections, mapFilter.js is the controller and view component for the feature
+ */
 function MapPage() {
+    // Setting defaults on load
     const [filter, setFilter] = React.useState({
         selected2004: false,
         selected2005: false,

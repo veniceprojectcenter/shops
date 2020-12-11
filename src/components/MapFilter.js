@@ -9,10 +9,20 @@ import makeAnimated from 'react-select/animated';
 import groupTypeOptions from "../data/groupTypeOptions.json"
 import shopTypeOptions from "../data/shopTypeOptions.json"
 
-
+/**
+ * MapFilter({filter, setFilter})
+ * @param filter for filter statehook
+ * @param setFilter for filter statehook setter
+ * Component is view and controller for Filter feature
+ * Modifies checkbox components from material-ui for each year diplayed
+ * Overrides reac-select component to create select all feature for shop type filter
+ * 
+ * Options data for group type and shop type are imported from local JSONs in /data
+ */
 
 function MapFilter({filter, setFilter}){
-    
+
+  // YEAR FILTER COMPONENT OVERRIDES
   const Checkbox2004 = withStyles({
       root: {
           color: grey[50],
@@ -93,11 +103,13 @@ function MapFilter({filter, setFilter}){
     checked: {},
   })((props) => <Checkbox color="default" {...props} />);
 
-
+  //YEAR FILTER CONTROLLER
   const handleYearChange = (event) => {
     setFilter({ ...filter, [event.target.name]: event.target.checked});
   };
+//---------------------------------------------------------------------
 
+  //GROUPTYPE FILTER CONTROLLER
   const animatedComponents= makeAnimated();
 
   const handleGroupTypeChange = (value) => {
@@ -107,9 +119,10 @@ function MapFilter({filter, setFilter}){
     setFilter({...filter, shopType: filter.shopType.splice(0, filter.shopType.length)})
     setFilter({...filter, groupType: value})
   };
-  
-//IMPLEMENTING SHOPTYPE FILTER
-  
+//---------------------------------------------------------------------
+
+  //IMPLEMENTING SHOPTYPE FILTER
+  //shopTypeSelect.js overrrides react-select select component in order to have select all feature
   const allOption = {
     label: "Select All",
     value:"*"
@@ -148,78 +161,76 @@ function MapFilter({filter, setFilter}){
     setFilter({...filter, groupType: filter.groupType.splice(0, filter.groupType.length)})
     setFilter({...filter, shopType: value})
   };
-  
-
-
+//---------------------------------------------------------------------
   return(
       <div className="Filter-Container">
-              <h1 id="filter-title"> Filters</h1>
-              <div className="filter-type">
-                  <h2 id="filter-type"> Year Collected</h2>
-                  <div className="radio">
-                  <div className="radio-row">
-                      <div className="radio-year">
-                          <Checkbox2004 checked={filter.selected2004} onChange={handleYearChange} name="selected2004"/>
-                          <h3 id="filter-year">2004</h3>
-                      </div>
-                      <div className="radio-year">
-                          <Checkbox2005 checked={filter.selected2005} onChange={handleYearChange} name="selected2005"/>
-                          <h3 id="filter-year">2005</h3>
-                      </div>
-                  </div>
-                  <div className="radio-row">
-                      <div className="radio-year">
-                          <Checkbox2009 checked={filter.selected2009} onChange={handleYearChange} name="selected2009"/>
-                          <h3 id="filter-year">2009</h3>
-                      </div>
-                      <div className="radio-year">
-                          <Checkbox2010 checked={filter.selected2010} onChange={handleYearChange} name="selected2010"/>
-                          <h3 id="filter-year">2010</h3>
-                      </div>
-                  </div>
-                  <div className="radio-row">
-                      <div className="radio-year">
-                          <Checkbox2011 checked={filter.selected2011} onChange={handleYearChange} name="selected2011"/>
-                          <h3 id="filter-year">2011</h3>
-                      </div>
-                      <div className="radio-year">
-                          <Checkbox2012 checked={filter.selected2012} onChange={handleYearChange} name="selected2012"/>
-                          <h3 id="filter-year">2012</h3>
-                      </div>
-                  </div>
-                  <div className="radio-row">
-                      <div className="radio-year">
-                          <Checkbox2015 checked={filter.selected2015} onChange={handleYearChange} name="selected2015"/>
-                          <h3 id="filter-year">2015</h3>
-                      </div>
-                      <div className="radio-year">
-                          <Checkbox2018 checked={filter.selected2018} onChange={handleYearChange} name="selected2018"/>
-                          <h3 id="filter-year">2018</h3>
-                      </div>
-                  </div>
-                  </div>
-              </div>
-              <div className="filter-type select">
-                  <h2 id="filter-type"> Group Type</h2>
-                  <Select isMulti components={animatedComponents} value={filter.groupType} options={groupTypeOptions} onChange={handleGroupTypeChange} className="search" controlShouldRenderValue="true" />
-              </div>
-              <div className="filter-type select">
-                  <h2 id="filter-type"> Shop Type</h2>
-                  <ShopTypeSelect
-                    options={shopTypeOptions}
-                    isMulti
-                    hideSelectedOptions= {false}
-                    components={{
-                      MultiValue, 
-                      ValueContainer,
-                      animatedComponents
-                    }}
-                    onChange={handleShopTypeChange}
-                    allowSelectAll={true}
-                    value={filter.shopType}
-                    className="search"
-                    />
-              </div>
+            <h1 id="filter-title"> Filters</h1>
+            <div className="filter-type">
+                <h2 id="filter-type"> Year Collected</h2>
+                <div className="checkbox">
+                <div className="checkbox-row">
+                    <div className="checkbox-year">
+                        <Checkbox2004 checked={filter.selected2004} onChange={handleYearChange} name="selected2004"/>
+                        <h3 id="filter-year">2004</h3>
+                    </div>
+                    <div className="checkbox-year">
+                        <Checkbox2005 checked={filter.selected2005} onChange={handleYearChange} name="selected2005"/>
+                        <h3 id="filter-year">2005</h3>
+                    </div>
+                </div>
+                <div className="checkbox-row">
+                    <div className="checkbox-year">
+                        <Checkbox2009 checked={filter.selected2009} onChange={handleYearChange} name="selected2009"/>
+                        <h3 id="filter-year">2009</h3>
+                    </div>
+                    <div className="checkbox-year">
+                        <Checkbox2010 checked={filter.selected2010} onChange={handleYearChange} name="selected2010"/>
+                        <h3 id="filter-year">2010</h3>
+                    </div>
+                </div>
+                <div className="checkbox-row">
+                    <div className="checkbox-year">
+                        <Checkbox2011 checked={filter.selected2011} onChange={handleYearChange} name="selected2011"/>
+                        <h3 id="filter-year">2011</h3>
+                    </div>
+                    <div className="checkbox-year">
+                        <Checkbox2012 checked={filter.selected2012} onChange={handleYearChange} name="selected2012"/>
+                        <h3 id="filter-year">2012</h3>
+                    </div>
+                </div>
+                <div className="checkbox-row">
+                    <div className="checkbox-year">
+                        <Checkbox2015 checked={filter.selected2015} onChange={handleYearChange} name="selected2015"/>
+                        <h3 id="filter-year">2015</h3>
+                    </div>
+                    <div className="checkbox-year">
+                        <Checkbox2018 checked={filter.selected2018} onChange={handleYearChange} name="selected2018"/>
+                        <h3 id="filter-year">2018</h3>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div className="filter-type select">
+                <h2 id="filter-type"> Group Type</h2>
+                <Select isMulti components={animatedComponents} value={filter.groupType} options={groupTypeOptions} onChange={handleGroupTypeChange} className="search" controlShouldRenderValue="true" />
+            </div>
+            <div className="filter-type select">
+                <h2 id="filter-type"> Shop Type</h2>
+                <ShopTypeSelect
+                  options={shopTypeOptions}
+                  isMulti
+                  hideSelectedOptions= {false}
+                  components={{
+                    MultiValue, 
+                    ValueContainer,
+                    animatedComponents
+                  }}
+                  onChange={handleShopTypeChange}
+                  allowSelectAll={true}
+                  value={filter.shopType}
+                  className="search"
+                  />
+            </div>
       </div>
   );
 }
