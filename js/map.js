@@ -10,7 +10,7 @@ app.init_map = function (ctl) {
     });
     var zoomButton = L.control.zoom({ position: "bottomright" }).addTo(ctl.map);
     L.tileLayer(
-      "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2l0eWtub3dsZWRnZSIsImEiOiJjaWw1YmluZWEwMGZ5d3VtNW1jdjdkd3kyIn0.7KtmSdDinGzAV4ioENVtNg",
+      "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic2VyZW5kcHQiLCJhIjoiY2pubHE4MTBqMTUxcTNrbDc4czB0ZDUwcSJ9.ZIV2n4CBDs6xw_iIu4Sfrw",
       {
         id: 'mapbox/streets-v11',
         attribution:
